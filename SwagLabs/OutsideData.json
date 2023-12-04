@@ -2,9 +2,13 @@
 
 {
       "username" : "standard_user",
-      "password" : "secret_saucddee",
+      "password" : "secret_sauce",
       "Expected Title" : "Swag Labs",
-      "ProductName" : "Jacket"
+      "ProductName" : "Jacket",
+      "FirstName" : "Hemanathan",
+      "LastName" : "Appu",
+      "PostalCode" : "560058",
+      "SortValue" : "Name (A to Z)"
 }
 
 ]

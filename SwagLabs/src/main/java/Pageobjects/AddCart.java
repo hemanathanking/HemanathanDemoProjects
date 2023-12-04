@@ -2,6 +2,8 @@ package Pageobjects;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,6 +27,7 @@ WebDriver driver;
 	List<WebElement> ProductTile;
 	@FindBy(xpath="//div[@class='inventory_item_price']")
 	List<WebElement> ProductPrice;
+	By ProductPrices=By.xpath("//div[@class='inventory_item_price']");
 	@FindBy(xpath = "//button[text()='Add to cart']")
 	List<WebElement> AddToCart;
 	@FindBy(className = "product_sort_container")
@@ -53,55 +56,60 @@ WebDriver driver;
 		for(WebElement sortvalue: SortOptions)
 		{
 			
-			if(sortvalue.getText().equalsIgnoreCase(SortMethod))
-			{
-				SelectByVisibleText(Sort, SortMethod);
-				for(int i=0;i<ProductTile.size();i++)
-				{
-					String Titles=ProductTile.get(i).getText();
-					
-					ArrayList Dsc=new ArrayList();
-					Dsc.add(Titles);
-					System.out.println(Dsc);
-				}
-			}
-			else if(sortvalue.getText().equalsIgnoreCase(SortMethod))
-			{
-				SelectByVisibleText(Sort, SortMethod);
-				for(int i=0;i<ProductTile.size();i++)
-				{
-					String Titles=ProductTile.get(i).getText();
-					
-					ArrayList Asc=new ArrayList();
-					Asc.add(Titles);
-					System.out.println(Asc);
-				}
-			}
-			else if(sortvalue.getText().equalsIgnoreCase(SortMethod))
-			{
-				SelectByVisibleText(Sort, SortMethod);
-				for(int i=0;i<ProductPrice.size();i++)
-				{
-					String Prices=ProductPrice.get(i).getText();
-					
-					ArrayList LowToHigh=new ArrayList();
-					LowToHigh.add(Prices);
-					System.out.println(Prices);
-			}
-			}
-			else if(sortvalue.getText().equalsIgnoreCase(SortMethod))
-			{
-				SelectByVisibleText(Sort, SortMethod);
-				for(int i=0;i<ProductPrice.size();i++)
-				{
-					String Prices=ProductPrice.get(i).getText();
-					
-					ArrayList HighToLow=new ArrayList();
-					HighToLow.add(Prices);
-					System.out.println(HighToLow);
-					
-			}
-		}  
+			System.out.println(sortvalue.getText());
+			System.out.println(SortMethod);
+			
+//			if(sortvalue.getText().equalsIgnoreCase(SortMethod))
+//			{
+//				SelectByVisibleText(Sort, SortMethod);
+//				for(int i=0;i<ProductTile.size();i++)
+//				{
+//					String Titles=ProductTile.get(i).getText();
+//					
+//					ArrayList Dsc=new ArrayList();
+//					Dsc.add(Titles);
+//					System.out.println(Dsc);
+//				}
+//			}
+//			else if(sortvalue.getText().equalsIgnoreCase(SortMethod))
+//			{
+//				SelectByVisibleText(Sort, SortMethod);
+//				for(int i=0;i<ProductTile.size();i++)
+//				{
+//					String Titles=ProductTile.get(i).getText();
+//					
+//					ArrayList Asc=new ArrayList();
+//					Asc.add(Titles);
+//					System.out.println(Asc);
+//				}
+//			}
+//			else if(sortvalue.getText().equalsIgnoreCase(SortMethod))
+//			{
+//				SelectByVisibleText(Sort, SortMethod);
+//				waitForElementsToAppear(ProductPrices);
+//				for(int i=0;i<ProductPrice.size();i++)
+//				{
+//					String Prices=ProductPrice.get(i).getText();
+//					
+//					ArrayList LowToHigh=new ArrayList();
+//					LowToHigh.add(Prices);
+//					System.out.println(Prices);
+//			}
+//			}
+//			else if(sortvalue.getText().equalsIgnoreCase(SortMethod))
+//			{
+//				SelectByVisibleText(Sort, SortMethod);
+//				waitForElementsToAppear(ProductPrices);
+//				for(int i=0;i<ProductPrice.size();i++)
+//				{
+//					String Prices=ProductPrice.get(i).getText();
+//					
+//					ArrayList HighToLow=new ArrayList();
+//					HighToLow.add(Prices);
+//					System.out.println(HighToLow);
+//					
+//			}
+//		}   
 	}
 	
 }}

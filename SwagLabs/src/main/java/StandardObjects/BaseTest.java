@@ -81,7 +81,7 @@ public class BaseTest
 	@BeforeTest
 	public ExtentReports Extent()
 	{
-		String path="/home/hemanathan.m/eclipse-workspace/SwagLabs/Reports/newreport.html";
+		String path="/home/hemanathan.m/git/TestRepository/SwagLabs/Reports/newreport.html";
 		ExtentSparkReporter report=new ExtentSparkReporter(path);
 		report.config().setReportName("Testing report with results");
 		report.config().setDocumentTitle("Test Results");
@@ -113,14 +113,14 @@ public class BaseTest
 		@DataProvider
 		public Object[] data() throws IOException
 		{
-			List<HashMap<String,String>> Data=JsonToHash("/home/hemanathan.m/eclipse-workspace/SwagLabs/src/main/java/DataObjects/OutsideData.json");
+			List<HashMap<String,String>> Data=JsonToHash("/home/hemanathan.m/git/TestRepository/SwagLabs/src/main/java/DataObjects/OutsideData.json");
 			return new Object[] {Data.get(0)};
 		}
 		
 		@DataProvider
 		public Object[] data1() throws IOException
 		{
-			List<HashMap<String,String>> Data=JsonToHash("/home/hemanathan.m/eclipse-workspace/SwagLabs/src/main/java/DataObjects/OutsideData1.json");
+			List<HashMap<String,String>> Data=JsonToHash("/home/hemanathan.m/git/TestRepository/SwagLabs/src/main/java/DataObjects/OutsideData.json");
 			return new Object[] {Data.get(1)};
 		}
 	

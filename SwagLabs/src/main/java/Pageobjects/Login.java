@@ -31,13 +31,13 @@ public class Login extends AbstractComponents
 		driver.get("https://www.saucedemo.com/");
 	}
 	
-	public AddCart Login1(String UN,String PW)
+	public void Login1(String UN,String PW)
 	{
 	Type(Username,UN);
 	Type(Password, PW);
 	ClickOn(Login);
 	
-	return new AddCart(driver);
+	//return new AddCart(driver);
 	}
 	
 	public AddCart TitleValidation()
