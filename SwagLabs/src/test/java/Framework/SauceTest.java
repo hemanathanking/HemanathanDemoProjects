@@ -29,24 +29,24 @@ public class SauceTest extends BaseTest
 		Obj.Login1(input.get("username"), input.get("password"));
 		AddCart cart=Obj.TitleValidation();
 		
-		cart.Sort(input.get("SortValue"));
+		cart.Sorting(input.get("SortValue"));
 		
-		//Assert.assertEquals(Title, input.get("Expected Title"));
+	//	Assert.assertEquals(Title, input.get("Expected Title"));
 		
-//		CheckoutPage checkout=cart.AddToCart(input.get("ProductName"));
-//		
-//		CheckoutStepOne checkoutstepone=checkout.ProceedTocheckout();
-//		checkoutstepone.UserDetails(input.get("FirstName"), input.get("LastName"),input.get("PostalCode"));
-//		
-//		CheckoutStepTwo checkoutsteptwo=checkoutstepone.Continue();
-//		CheckoutComplete complete=checkoutsteptwo.CompleteOrder();
-//		
-//		System.out.println(complete.OrderConfirmation());
-//		
-//		Menu menu=complete.GoBackToHome();
-//		
-//		menu.ClickOnMenu();
-//		menu.Logout();
+		CheckoutPage checkout=cart.AddToCart(input.get("ProductName"));
+		
+		CheckoutStepOne checkoutstepone=checkout.ProceedTocheckout();
+		checkoutstepone.UserDetails(input.get("FirstName"), input.get("LastName"),input.get("PostalCode"));
+		
+		CheckoutStepTwo checkoutsteptwo=checkoutstepone.Continue();
+		CheckoutComplete complete=checkoutsteptwo.CompleteOrder();
+		
+		System.out.println(complete.OrderConfirmation());
+		
+		Menu menu=complete.GoBackToHome();
+		
+		menu.ClickOnMenu();
+		menu.Logout();
 		
 		
 	}

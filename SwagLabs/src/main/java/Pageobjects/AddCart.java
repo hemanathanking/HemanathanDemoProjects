@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import StandardObjects.AbstractComponents;
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 public class AddCart extends AbstractComponents
 {
@@ -24,10 +25,9 @@ WebDriver driver;
 	}
 	
 	@FindBy(xpath="//div[@class='inventory_item_name ']")
-	List<WebElement> ProductTile;
+	List<WebElement> ProductTitle;
 	@FindBy(xpath="//div[@class='inventory_item_price']")
 	List<WebElement> ProductPrice;
-	By ProductPrices=By.xpath("//div[@class='inventory_item_price']");
 	@FindBy(xpath = "//button[text()='Add to cart']")
 	List<WebElement> AddToCart;
 	@FindBy(className = "product_sort_container")
@@ -35,12 +35,53 @@ WebDriver driver;
 	@FindBy(xpath = "//select[@class='product_sort_container']//option")
 	List<WebElement> SortOptions;
 	
+
+
+	public void Sorting(String SortMethod)
+	{
+		SelectByVisibleText(Sort, SortMethod);
+		
+		String SeletedMethod=SelectedOption(Sort);
+		
+		if(SeletedMethod.contains("Price (low to high)"))
+		{
+			for(int i=0;i<ProductPrice.size();i++)
+			{
+				String Prices=ProductPrice.get(i).getText();
+				System.out.println(Prices);
+		}
+		}
+		else if(SeletedMethod.contains("Price (high to low)"))
+		{
+			for(int i=0;i<ProductPrice.size();i++)
+			{
+				String Prices=ProductPrice.get(i).getText();
+				System.out.println(Prices);
+		}
+		}
+		else if(SeletedMethod.contains("Name (A to Z)"))
+		{
+			for(int i=0;i<ProductTitle.size();i++)
+			{
+				String Titles=ProductTitle.get(i).getText();
+				System.out.println(Titles);		
+			}
+		}
+		else if(SeletedMethod.contains("Name (Z to A)"))
+		{
+			for(int i=0;i<ProductTitle.size();i++)
+			{
+				String Titles=ProductTitle.get(i).getText();
+				System.out.println(Titles);			
+			}
+		}
+	}
 	
 	public CheckoutPage AddToCart(String ProductName)
 	{
-		for(int i=0;i<=ProductTile.size();i++)
+		for(int i=0;i<=ProductTitle.size();i++)
 		{
-			String Titles=ProductTile.get(i).getText();
+			String Titles=ProductTitle.get(i).getText();
 			if(Titles.contains(ProductName))
 			{
 				AddToCart.get(i).click();
@@ -50,66 +91,4 @@ WebDriver driver;
 		
 		return new CheckoutPage(driver);
 	}
-	
-	public void Sort(String SortMethod)
-	{
-		for(WebElement sortvalue: SortOptions)
-		{
-			
-			System.out.println(sortvalue.getText());
-			System.out.println(SortMethod);
-			
-//			if(sortvalue.getText().equalsIgnoreCase(SortMethod))
-//			{
-//				SelectByVisibleText(Sort, SortMethod);
-//				for(int i=0;i<ProductTile.size();i++)
-//				{
-//					String Titles=ProductTile.get(i).getText();
-//					
-//					ArrayList Dsc=new ArrayList();
-//					Dsc.add(Titles);
-//					System.out.println(Dsc);
-//				}
-//			}
-//			else if(sortvalue.getText().equalsIgnoreCase(SortMethod))
-//			{
-//				SelectByVisibleText(Sort, SortMethod);
-//				for(int i=0;i<ProductTile.size();i++)
-//				{
-//					String Titles=ProductTile.get(i).getText();
-//					
-//					ArrayList Asc=new ArrayList();
-//					Asc.add(Titles);
-//					System.out.println(Asc);
-//				}
-//			}
-//			else if(sortvalue.getText().equalsIgnoreCase(SortMethod))
-//			{
-//				SelectByVisibleText(Sort, SortMethod);
-//				waitForElementsToAppear(ProductPrices);
-//				for(int i=0;i<ProductPrice.size();i++)
-//				{
-//					String Prices=ProductPrice.get(i).getText();
-//					
-//					ArrayList LowToHigh=new ArrayList();
-//					LowToHigh.add(Prices);
-//					System.out.println(Prices);
-//			}
-//			}
-//			else if(sortvalue.getText().equalsIgnoreCase(SortMethod))
-//			{
-//				SelectByVisibleText(Sort, SortMethod);
-//				waitForElementsToAppear(ProductPrices);
-//				for(int i=0;i<ProductPrice.size();i++)
-//				{
-//					String Prices=ProductPrice.get(i).getText();
-//					
-//					ArrayList HighToLow=new ArrayList();
-//					HighToLow.add(Prices);
-//					System.out.println(HighToLow);
-//					
-//			}
-//		}   
-	}
-	
-}}
+}

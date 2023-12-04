@@ -86,6 +86,12 @@ public class AbstractComponents
 		s.selectByIndex(value);
 	}
 	
+	public String SelectedOption(WebElement ele)
+	{
+		Select s=new Select(ele);
+		return s.getFirstSelectedOption().getText();
+	}
+	
 	public void SwitchToFrameByValue(WebDriver driver, WebElement iframe)
 	{
 		driver.switchTo().frame(iframe);

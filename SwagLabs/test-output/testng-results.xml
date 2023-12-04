@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-04T16:22:50 IST" name="Default suite" finished-at="2023-12-04T16:22:59 IST" duration-ms="9106">
+  <suite started-at="2023-12-04T17:33:00 IST" name="Default suite" finished-at="2023-12-04T17:33:05 IST" duration-ms="5525">
     <groups>
     </groups>
-    <test started-at="2023-12-04T16:22:50 IST" name="Default test" finished-at="2023-12-04T16:22:59 IST" duration-ms="9106">
+    <test started-at="2023-12-04T17:33:00 IST" name="Default test" finished-at="2023-12-04T17:33:05 IST" duration-ms="5525">
       <class name="Framework.SauceTest">
-        <test-method is-config="true" signature="Extent()[pri:0, instance:Framework.SauceTest@4b45a2f5]" started-at="2023-12-04T16:22:50 IST" name="Extent" finished-at="2023-12-04T16:22:50 IST" duration-ms="303" status="PASS">
+        <test-method is-config="true" signature="Extent()[pri:0, instance:Framework.SauceTest@4b45a2f5]" started-at="2023-12-04T17:33:00 IST" name="Extent" finished-at="2023-12-04T17:33:00 IST" duration-ms="316" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Extent -->
-        <test-method signature="Validation(java.util.HashMap)[pri:0, instance:Framework.SauceTest@4b45a2f5]" started-at="2023-12-04T16:22:50 IST" name="Validation" data-provider="data" finished-at="2023-12-04T16:22:59 IST" duration-ms="8581" status="PASS">
+        <test-method signature="Validation(java.util.HashMap)[pri:0, instance:Framework.SauceTest@4b45a2f5]" started-at="2023-12-04T17:33:00 IST" name="Validation" data-provider="data" finished-at="2023-12-04T17:33:05 IST" duration-ms="4985" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Expected Title=Swag Labs, password=secret_sauce, ProductName=Jacket, FirstName=Hemanathan, SortValue=Price (low to high), PostalCode=560058, LastName=Appu, username=standard_user}]]>
+                <![CDATA[{Expected Title=Swag Labs, password=secret_sauce, ProductName=Jacket, FirstName=Hemanathan, SortValue=Name (Z to A), PostalCode=560058, LastName=Appu, username=standard_user}]]>
               </value>
             </param>
           </params>
