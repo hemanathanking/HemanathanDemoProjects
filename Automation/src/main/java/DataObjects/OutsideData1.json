@@ -1,0 +1,33 @@
+[
+
+{
+      "username" : "treds_ind",
+      "captcha" : "123",
+      "password" : "Gem@1010",
+      "CatName" : "trackballs",
+      "prodname" : "TBRND computer mouse or trackballs",
+      "State"  : "KARNATAKA",
+      "Location" : "tredsind",
+      "Quantity" : "1",
+      "AdminDesignation" : "Tester",
+      "FinanceDesignation" : "QA automation",
+      "FinApprovalDoc"  : "/home/hemanathan/Downloads/1simple.pdf",
+      "OTP" : "111111"  
+},
+
+{
+      "username" : "nalcobuyer",
+      "captcha" : "123",
+      "password" : "Gem@1919",
+      "CatName" : "trackballs",
+      "prodname" : "TBRND computer mouse or trackballs",
+      "State"  : "UTTAR PRADESH",
+      "Location" : "Hemant Sharma",
+      "Quantity" : "1",
+      "AdminDesignation" : "Tester",
+      "FinanceDesignation" : "QA automation",
+      "FinApprovalDoc"  : "/home/hemanathan/Downloads/1a.pdf",
+      "OTP" : "111111"  
+}
+
+]
