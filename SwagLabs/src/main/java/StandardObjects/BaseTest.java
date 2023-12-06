@@ -81,7 +81,7 @@ public class BaseTest
 	@BeforeTest
 	public ExtentReports Extent()
 	{
-		String path="/home/hemanathan.m/git/TestRepository/SwagLabs/Reports/newreport.html";
+		String path="/home/hemanathan.m/git/TestRepository/SwagLabs/Reports/TestReport.html";
 		ExtentSparkReporter report=new ExtentSparkReporter(path);
 		report.config().setReportName("Testing report with results");
 		report.config().setDocumentTitle("Test Results");
