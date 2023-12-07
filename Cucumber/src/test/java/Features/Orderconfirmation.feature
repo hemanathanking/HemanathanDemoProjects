@@ -16,4 +16,4 @@ Feature: SwagLabs Testing
     Examples: 
       | username  | password | ProductName  | FirstName | LastName | Zipcode | Confirmation_message |
       |  standard_user | secret_sauce | Jacket | Hemanathan | Appu | 560058 | Thank you for your order! |
-	
+	    |  visual_user | secret_sauce | Onesie | Navilan | King | 560094 | Thank you for your order! |
