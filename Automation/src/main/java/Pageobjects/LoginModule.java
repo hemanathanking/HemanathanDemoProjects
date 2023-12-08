@@ -33,9 +33,9 @@ public class LoginModule extends AbstractComponents
 	@FindBy(xpath="//button[@class='button pull-right']")
 	WebElement CheckOK;
 
-	public void LaunchApp()
+	public void LaunchApp(String URL) 
 	{
-		driver.get("https://sso.gemorion.org/ARXSSO/oauth/doLogin");
+		driver.get(URL);
 	}
 	
 	public void login(String username, String captcha, String password) 

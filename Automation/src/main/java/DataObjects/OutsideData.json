@@ -1,7 +1,25 @@
 [
 
 {
+      "URL" : "https://sso.gemorion.org/ARXSSO/oauth/doLogin",
       "username" : "viv_buy2",
+      "captcha" : "123",
+      "password" : "Gem@1919",
+      "CatName" : "trackballs",
+      "prodname" : "TBRND computer mouse or trackballs",
+      "State"  : "KARNATAKA",
+      "Location" : "3buy",
+      "Quantity" : "1",
+      "PurchaseType": "L1",
+      "AdminDesignation" : "Tester",
+      "FinanceDesignation" : "QA automation",
+      "FinApprovalDoc"  : "/home/hemanathan.m/Music/a.pdf",
+      "OTP" : "111111"  
+},
+
+{
+      "URL" : "https://sso.gemorion.org/ARXSSO/oauth/doLogin",
+      "username" : "viv_buy",
       "captcha" : "123",
       "password" : "Gem@1919",
       "CatName" : "trackballs",

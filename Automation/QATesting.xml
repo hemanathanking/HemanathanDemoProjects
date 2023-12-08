@@ -6,9 +6,10 @@
 <listener class-name="StandardObjects.Listeners"/>
 </listeners>
 
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="Test1">
     <classes>
-      <class name="Framework.UatOrderCreation"/>
+      <class name="Framework.UatOrderCreation"/> 
     </classes>
   </test> <!-- Test -->
+  
 </suite > <!-- Suite -->

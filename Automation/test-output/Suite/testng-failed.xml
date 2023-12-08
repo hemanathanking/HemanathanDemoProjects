@@ -4,14 +4,15 @@
   <listeners>
     <listener class-name="StandardObjects.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Test(failed)">
+  <test thread-count="5" parallel="tests" name="Test1(failed)">
     <classes>
       <class name="Framework.UatOrderCreation">
         <methods>
           <include name="OrderCreation" invocation-numbers="0"/>
+          <include name="TearDown"/>
           <include name="Extent"/>
         </methods>
       </class> <!-- Framework.UatOrderCreation -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

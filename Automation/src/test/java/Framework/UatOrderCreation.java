@@ -23,7 +23,7 @@ public class UatOrderCreation extends BaseTest
 	public void OrderCreation(HashMap<String, String> input) throws IOException
 	{
 		LoginModule loginmodule=LaunchBrowser();
-		loginmodule.LaunchApp();
+		loginmodule.LaunchApp(input.get("URL"));
 		loginmodule.login(input.get("username"), input.get("captcha"), input.get("password"));
 		MarketSearch CatSearch=loginmodule.Checkbox();
 		AddCart cart=CatSearch.search(input.get("CatName"));
